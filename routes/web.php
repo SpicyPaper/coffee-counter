@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CoffeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,8 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name("home");
+Route::resource('coffee', CoffeeController::class );
 
 Route::get('/blabla', function () {
     return view('welcome');

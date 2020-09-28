@@ -13,7 +13,7 @@ class CreateCoffeeTable extends Migration
      */
     public function up()
     {
-        Schema::create('coffee', function (Blueprint $table) {
+        Schema::create('coffees', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
             $table->integer('counter')->unsigned()->default(0);
@@ -28,6 +28,6 @@ class CreateCoffeeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coffee');
+        Schema::dropIfExists('coffees');
     }
 }
